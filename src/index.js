@@ -1,6 +1,6 @@
 const loadData = async (period) => {
 
-    const url = 'http://127.0.0.1:3000/activities';
+    const url = 'https://fem-time-tracking-dashboard.herokuapp.com/activities';
     const res =         await fetch(url);
     const activities =  await res.json();
 
