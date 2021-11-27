@@ -1,0 +1,160 @@
+// @tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+    @apply box-border p-0 m-0;
+}
+
+html {
+    font-family: 'Rubik', sans-serif;
+    font-size: 18px;
+    @apply bg-veryDarkBlue;
+}
+
+.wrapper {
+    @apply h-full px-6 py-20;
+    @apply xl:h-screen xl:grid xl:px-0 xl:py-0 xl:place-items-center;
+}
+
+.main {
+    @apply grid gap-6 mx-auto;
+    min-width: 321px;
+    @apply md:grid-cols-2 md:max-w-3xl;
+    @apply lg:max-w-3xl;
+    @apply xl:max-w-5xl xl:grid-cols-4;
+}
+
+.card {
+    @apply rounded-2xl flex flex-col;
+
+    &Face {
+        @apply rounded-2xl;
+
+        &:not(.cardAsideFace) {    
+            @apply flex-grow p-6 mt-10 bg-darkBlue cursor-pointer;
+            @apply grid gap-4;
+            grid-template-rows: auto 1fr;
+
+            &:hover {
+                filter: brightness(1.3);
+            }
+
+            > header {
+                @apply flex items-center justify-between text-white;
+
+                > img {
+                    @apply cursor-pointer;
+
+                    &:hover {
+                        filter: brightness(0) invert(1);
+                    }
+                }
+            }
+    
+            > div {
+                @apply self-center flex items-center justify-between;
+                @apply xl:items-start xl:flex-col;
+
+                p:first-child {
+                    @apply text-2xl font-light text-white;
+                    @apply xl:text-5xl;
+                }
+
+                p:last-child {
+                    @apply text-sm text-paleBlue;
+                    @apply xl:text-sm;
+                }
+            }
+        }
+
+        
+    }
+}
+
+.cardAside {
+    @apply grid bg-darkBlue;
+    @apply md:col-span-2;
+    grid-template-rows: 1fr auto;
+    @apply xl:row-span-2 xl:col-span-1;
+
+    &Face {
+        @apply flex gap-4 justify-center px-4 py-6;
+        @apply xl:flex-col xl:px-8 xl:py-6;
+        @apply bg-blue text-white font-light;
+
+        img {
+            @apply rounded-full border-2 border-solid border-white;
+            @apply w-1/4 self-center;
+            @apply md:w-1/6;
+            @apply xl:w-2/5 xl:self-auto;
+        }
+
+        > div {
+            @apply flex flex-col justify-center;
+
+            > p:first-child {
+                @apply text-xs text-paleBlue font-light;
+                @apply xl:text-base;
+            }
+    
+            > p:last-child {
+                @apply text-xl;
+                @apply xl:text-3xl;
+            }
+        }        
+    }
+
+    &Back {
+        @apply mx-8 my-6 flex justify-between gap-2;
+        @apply xl:flex-col;
+
+        input {
+            display: none;
+
+            & + label {
+                @apply text-desaturatedBlue cursor-pointer;
+                @apply xl:text-base;
+            }
+
+            &:checked + label {
+                @apply text-white;
+            }
+        }
+    }
+}
+
+.card {
+    &Work {
+        @apply bg-lightRedWork bg-icon-work bg-right-top bg-no-repeat; 
+    }
+
+    &Play {
+        @apply bg-softBluePlay bg-icon-play bg-right-top bg-no-repeat; 
+    }
+
+    &Study {
+        @apply bg-lightRedStudy bg-icon-study bg-right-top bg-no-repeat; 
+    }
+
+    &Exercise {
+        @apply bg-limeGreenExercise bg-icon-exercise bg-right-top bg-no-repeat; 
+    }
+
+    &Social {
+        @apply bg-violetSocial bg-icon-social bg-right-top bg-no-repeat; 
+    }
+
+    &Care {
+        @apply bg-softOrangeCare bg-icon-care bg-right-top bg-no-repeat; 
+    }
+}
+
+// Template by Frontend Mentor
+.attribution { 
+    @apply text-desaturatedBlue text-xs text-center;
+
+    em {
+        @apply text-paleBlue;
+    }
+}

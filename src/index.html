@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="<%=require('./images/favicon-32x32.png')%>">
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap" rel="stylesheet"> 
+  
+  <title><%= htmlWebpackPlugin.options.title %></title>
+</head>
+<body>
+
+  <div class="wrapper">
+    <main class="main">
+
+      <aside class="card cardAside">
+        <div class="cardFace cardAsideFace">
+          <img src="<%=require('./images/image-jeremy.png')%>" alt="Photo of Jeremy in profile.">
+          <div>
+            <p>Report for</p>
+            <p>Jeremy Robson</p>
+          </div>  
+        </div>
+
+        <div class="cardAsideBack">
+          <div>
+            <input type="radio" class="btnDaily" id="daily" name="timePeriod" value="daily"
+                   checked>
+            <label for="daily">Daily</label>
+          </div>          
+          <div>
+            <input type="radio" class="btnWeekly" id="weekly" name="timePeriod" value="weekly">
+            <label for="weekly">Weekly</label>
+          </div>
+          <div>
+            <input type="radio" class="btnMonthly" id="monthly" name="timePeriod" value="monthly">
+            <label for="monthly">Monthly</label>
+          </div>
+        </div>       
+      </aside>
+
+      <article class="card cardWork">
+        <div class="cardFace cardWorkFace">
+          <header>
+            <p>Work</p>
+            <img src="<%=require('./images/icon-ellipsis.svg')%>">
+          </header>
+          <div>
+            <p class="work current">5hrs</p>
+            <p class="work previous">Last day - 7hrs</p>
+          </div>
+        </div>
+      </article>
+
+      <article class="card cardPlay">
+        <div class="cardFace cardPlayFace">
+          <header>
+            <p>Play</p>
+            <img src="<%=require('./images/icon-ellipsis.svg')%>">
+          </header>
+          <div>
+            <p class="play current">5hrs</p>
+            <p class="play previous">Last day - 7hrs</p>
+          </div>
+        </div>
+      </article>
+
+      <article class="card cardStudy">
+        <div class="cardFace cardStudyFace">
+          <header>
+            <p>Study</p>
+            <img src="<%=require('./images/icon-ellipsis.svg')%>">
+          </header>
+          <div>
+            <p class="study current">5hrs</p>
+            <p class="study previous">Last day - 7hrs</p>
+          </div>
+        </div>
+      </article>
+        
+      <article class="card cardExercise">
+        <div class="cardFace cardExerciseFace">
+          <header>
+            <p>Exercise</p>
+            <img src="<%=require('./images/icon-ellipsis.svg')%>">
+          </header>
+          <div>
+            <p class="exercise current">5hrs</p>
+            <p class="exercise previous">Last day - 7hrs</p>
+          </div>
+        </div>
+      </article>
+        
+      <article class="card cardSocial">
+        <div class="cardFace cardSocialFace">
+          <header>
+            <p>Social</p>
+            <img src="<%=require('./images/icon-ellipsis.svg')%>">
+          </header>
+          <div>
+            <p class="social current">5hrs</p>
+            <p class="social previous">Last day - 7hrs</p>
+          </div>
+        </div>
+      </article>
+        
+      <article class="card cardCare">
+        <div class="cardFace cardCareFace">
+          <header>
+            <p>Self Care</p>
+            <img src="<%=require('./images/icon-ellipsis.svg')%>">
+          </header>
+          <div>
+            <p class="selfcare current">5hrs</p>
+            <p class="selfcare previous">Last day - 7hrs</p>
+          </div>
+        </div>
+      </article>    
+
+    </main>
+  </div><!-- Wrapper ends here -->
+  
+  <footer class="attribution">
+    Created by <em>xs30snw</em> for Frontend Mentor as a solution to Time tracking dashboard challenge.
+  </footer>
+
+</body>
+</html>
